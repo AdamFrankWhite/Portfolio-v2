@@ -1,0 +1,117 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  background: #adefd1;
+  padding-bottom: 100px;
+}
+.hero-section img[alt="web design icon"] {
+  width: 55vw;
+  height: auto;
+  display: block;
+  margin: 100px auto 0 auto;
+}
+.hero-section h1,
+.hero-section h2 {
+  text-align: center;
+  line-height: 1em;
+  color: #00203f;
+}
+.hero-section h1 {
+  font-size: 1.9em;
+  text-transform: uppercase;
+  margin-top: 0.75em;
+  font-weight: 600;
+}
+.hero-section h2 {
+  width: 70%;
+  margin: auto;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-top: 0.25em;
+}
+.hero-section .cta-cont {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em;
+}
+.hero-section .cta-cont a {
+  padding: 0.6em;
+  margin: 1em 0.5em;
+  font-size: 0.95em;
+}
+.hero-section .cta-cont a:nth-of-type(1) {
+  background: #00203f;
+  color: #adefd1;
+}
+.hero-section .cta-cont a:nth-of-type(2) {
+  background: #0077ea;
+  color: #adefd1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+header i {
+  font-size: 2em;
+}
+
+.logo-cont {
+  display: flex;
+}
+.logo-cont > span {
+  font-size: 1.75em;
+  padding: 0.05em 0.1em;
+  border: 2px solid #00203f;
+  margin-right: 0.25em;
+}
+.logo-cont .logo-name {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logo-cont .logo-name > span:nth-of-type(1) {
+  font-size: 1.2em;
+  line-height: 1em;
+}
+.logo-cont .logo-name > span:nth-of-type(2) {
+  font-size: 0.7em;
+}
+
+.hello-top {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 100px 0px;
+  border-color: transparent transparent #00203f transparent;
+  margin-top: -100px;
+}
+
+.hello-section {
+  background: #00203f;
+  height: 300px;
+}
+
+img[src="/assets/me.png"] {
+  width: 30%;
+  height: auto;
+  border: 5px white solid;
+  border-radius: 57px;
+  display: block;
+  margin: auto;
+}
+
+/*# sourceMappingURL=main.css.map */
