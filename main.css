@@ -95,23 +95,138 @@ header i {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 100vw 100px 0px;
+  border-width: 0 100vw 75px 0;
   border-color: transparent transparent #00203f transparent;
-  margin-top: -100px;
+  margin-top: -99px;
+}
+
+.hello-bottom {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 75px 100vw 0 0;
+  border-color: #00203f #29af66 #29af66 #29af66;
 }
 
 .hello-section {
   background: #00203f;
-  height: 300px;
+  color: #dcf5e9;
+}
+.hello-section h3,
+.hello-section h4,
+.hello-section p {
+  width: 80%;
+  margin: auto;
+}
+.hello-section h3 {
+  font-size: 2em;
+  text-align: center;
+}
+.hello-section h4 {
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+.hello-section p {
+  color: white;
+  font-size: 0.75em;
+  margin-top: 1em;
+  line-height: 1.5em;
 }
 
 img[src="/assets/me.png"] {
   width: 30%;
   height: auto;
   border: 5px white solid;
-  border-radius: 57px;
+  border-radius: 20vw;
   display: block;
   margin: auto;
+}
+
+.services {
+  background: #29af66;
+  color: white;
+}
+.services h3 {
+  text-transform: uppercase;
+  font-size: 1.35em;
+  font-weight: 400;
+  width: 80%;
+  padding-top: 1em;
+  margin: auto;
+  text-align: center;
+  line-height: 1em;
+}
+.services hr {
+  width: 30%;
+  margin: 0.35em auto;
+  border-top: 1px white solid;
+}
+.services h3,
+.services h4,
+.services p {
+  width: 80%;
+  margin: auto;
+}
+.services p {
+  color: white;
+  font-size: 0.75em;
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+
+.card-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-cont .card {
+  margin: 10vw 10vw 0 10vw;
+  padding: 2em;
+  border-radius: 20px;
+  background: white;
+  color: #181818;
+  text-align: center;
+}
+.card-cont .card ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: 0.8em;
+  color: #181818;
+}
+.card-cont .card h4,
+.card-cont .card i {
+  text-align: center;
+}
+.card-cont .card i {
+  font-size: 2em;
+  background: #eeeeee;
+  padding: 0.8em;
+  border-radius: 50%;
+}
+.card-cont .card h4 {
+  font-size: 1.3em;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.card-cont .card:nth-of-type(1) {
+  color: #ea1010;
+}
+.card-cont .card:nth-of-type(2) {
+  color: #f1c40f;
+}
+.card-cont .card:nth-of-type(3) {
+  color: #0060a9;
+}
+
+@media (min-width: 800px) {
+  .services-bottom {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vw 100vw 75vw;
+    border-color: transparent transparent #00203f transparent;
+    margin-top: -100vw;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
