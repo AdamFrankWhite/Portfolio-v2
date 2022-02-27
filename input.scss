@@ -1,33 +1,40 @@
-a {
-    color: inherit;
-    text-decoration: none;
-}
+// Fonts
 
-body,
-html {
-    font-family: "Noto Sans", sans-serif;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    min-width: 100vw;
-    max-width: 100vw;
-    box-sizing: border-box;
-    font-size: 1.02em;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-ul {
-    padding-left: 0;
-}
+$fontStack: "Noto Sans", sans-serif;
 // Colors
 
 $navy: #00203f;
 $turquoise: #adefd1;
 $paleturquoise: #dcf5e9;
 $turquoisegreen: #29af66;
+$palegreen: #2bae66;
 $skyblue: #0077ea;
 $charcoal: #1a1a1a;
 $maroon: #5b0e10;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+}
+body,
+html {
+    font-family: $fontStack;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+
+    font-size: 1.02em;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+}
+ul {
+    padding-left: 0;
+}
+
 // Header
 .hero-section {
     background: $turquoise;
@@ -164,7 +171,9 @@ img[src="/assets/me.png"] {
 // H3 Heading
 
 .services,
-.portfolio {
+.portfolio,
+.pricing,
+.contact {
     h3 {
         text-transform: uppercase;
         font-size: 1.35em;
@@ -264,7 +273,11 @@ img[src="/assets/me.png"] {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 12vw 12vw 100vw;
+    border-width: 0 0 12vw 100vw;
+    @media (min-width: 800px) {
+        border-width: 0 30vw 12vw 70vw;
+    }
+
     // transform: rotate(180deg);
     border-color: transparent transparent white transparent;
     margin-top: -12vw;
@@ -309,5 +322,70 @@ img[src="/assets/me.png"] {
             flex-direction: column;
             padding: 1.5em;
         }
+    }
+}
+
+// Pricing
+
+.pricing-top {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vw 12vw 0;
+    @media (min-width: 800px) {
+        border-width: 0 70vw 12vw 30vw;
+    }
+    border-color: transparent transparent $maroon transparent;
+    margin-top: -50px;
+}
+
+section.pricing {
+    background: $maroon;
+    padding: 3em 0;
+    color: white;
+}
+
+// Contact
+
+.contact-top {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50vw 75px 50vw;
+    border-color: $maroon $maroon $palegreen $maroon;
+}
+
+section.contact {
+    background: $palegreen;
+    padding: 2em 0;
+    color: white;
+}
+
+form {
+    padding: 3em 0;
+    width: 80%;
+    margin: auto;
+    label {
+        text-align: left;
+        font-weight: bold;
+        width: 100%;
+        font-size: 0.8em;
+    }
+    input,
+    textarea {
+        width: 100%;
+        font-family: $fontStack;
+        margin-top: 0.15em;
+        margin-bottom: 1em;
+        background: transparent;
+        color: white;
+        border-radius: 5px;
+        padding: 0.5em;
+        font-size: 1.1em;
+        border: 2px solid white;
+    }
+
+    textarea {
+        min-height: 200px;
     }
 }
