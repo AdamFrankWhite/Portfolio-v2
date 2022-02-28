@@ -36,6 +36,11 @@
             src="https://kit.fontawesome.com/306d1177b1.js"
             crossorigin="anonymous"
         ></script>
+        <script
+            src="https://www.google.com/recaptcha/api.js"
+            async
+            defer
+        ></script>
     </head>
     <body>
         <section class="hero-section">
@@ -64,11 +69,16 @@
                         <li><a href="">Portfolio</a></li>
                         <li><a href="">Services</a></li>
                         <li><a href="">Pricing</a></li>
+                        <li><a href="">Blog</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-            <img src="/assets/hero-icon.svg" alt="web design icon" />
+            <img
+                loading="lazy"
+                src="/assets/hero-icon.svg"
+                alt="web design icon"
+            />
             <h1>Web Design and Development</h1>
             <h2>Custom, hand-coded web design for your business</h2>
             <div class="cta-cont">
@@ -78,7 +88,7 @@
         </section>
         <div class="hello-top" aria-hidden="true"></div>
         <section class="hello-section">
-            <img src="/assets/me.png" alt="adam white" />
+            <img loading="lazy" src="/assets/me.png" alt="adam white" />
             <h3>Hello there.</h3>
             <h4>
                 My name is Adam and I'm a web designer and developer, here to
@@ -167,7 +177,7 @@
             <h4>My latest projects</h4>
             <div class="portfolio-cont">
                 <div class="portfolio-item">
-                    <img src="/assets/shawfarm-desktop.png" />
+                    <img loading="lazy" src="/assets/shawfarm-desktop.png" />
                     <div class="portfolio-item-content">
                         <h4>Shaw Farm Holidays</h4>
                         <h5>Logo design and website re-design</h5>
@@ -189,7 +199,7 @@
                 </div>
                 <hr />
                 <div class="portfolio-item">
-                    <img src="/assets/heatons-desktop.png" />
+                    <img loading="lazy" src="/assets/heatons-desktop.png" />
                     <div class="portfolio-item-content">
                         <h4>Heatons Cats</h4>
                         <h5>Website re-design</h5>
@@ -211,7 +221,7 @@
                 </div>
                 <hr />
                 <div class="portfolio-item">
-                    <img src="/assets/qw-desktop.png" />
+                    <img loading="lazy" src="/assets/qw-desktop.png" />
                     <div class="portfolio-item-content">
                         <h4>ebook landing page</h4>
                         <h5>Website design with blog</h5>
@@ -237,6 +247,32 @@
         <section class="pricing">
             <h3>Pricing</h3>
             <hr />
+            <div class="packages-cont">
+                <div class="package-card">
+                    <h4>Starter Package</h4>
+                    <h5><span>from</span> £799</h5>
+                    <h6>What's Included?</h6>
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                        <li>Feature 4</li>
+                        <li>Feature 5</li>
+                    </ul>
+                </div>
+                <div class="package-card">
+                    <h4>Premium Package</h4>
+                    <h5><span>from</span> £1299</h5>
+                    <h6>What's Included?</h6>
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                        <li>Feature 4</li>
+                        <li>Feature 5</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <div class="contact-top" aria-hidden="true"></div>
         <section class="contact">
@@ -253,8 +289,47 @@
                 <input type="text" subject="name" />
                 <label for="message">Message</label>
                 <textarea name="message"></textarea>
+                <div
+                    class="g-recaptcha"
+                    data-sitekey="6LfgqqceAAAAAJEmdLybVq4ySbNsWdIng-R6l7MO"
+                ></div>
+                <input type="submit" />
             </form>
         </section>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Adam White</h3>
+                    <h4>Web Designer and Developer</h4>
+                    <hr />
+                    <p>
+                        Freelance web designer and developer based in Stockport,
+                        UK. I'm passionate about all things web design and am
+                        here to help small businesses improve their web
+                        presence.
+                    </p>
+                </div>
+
+                <div class="link-cont">
+                    <div class="row-1">
+                        <a
+                            href="https://www.linkedin.com/in/adam-white-781aa2168"
+                            rel="noopener"
+                            target="_blank"
+                        >
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:info@adamwhite.tech" rel="noopener">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="row-2">
+                        <a href="/privacy-policy">Privacy Policy</a>|
+                        <a>Working With Me</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <script src="/script.js" async defer></script>
     </body>
 </html>
