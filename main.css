@@ -343,7 +343,7 @@ nav ul li {
   height: 0;
   border-style: solid;
   border-width: 0 100vw 12vw 0;
-  border-color: transparent transparent #5b0e10 transparent;
+  border-color: transparent transparent #1a1a1a transparent;
   margin-top: -50px;
 }
 @media (min-width: 800px) {
@@ -353,7 +353,7 @@ nav ul li {
 }
 
 section.pricing {
-  background: #5b0e10;
+  background: #1a1a1a;
   padding: 3em 0;
   color: white;
 }
@@ -364,6 +364,17 @@ section.pricing {
   padding: 1.5em;
   width: 80%;
   margin: 2.5em auto;
+  overflow: hidden;
+}
+.package-card .package-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.package-card .package-card-title img {
+  width: 15%;
+  height: auto;
+  margin-right: 0.75em;
 }
 .package-card h4 {
   text-transform: uppercase;
@@ -381,12 +392,17 @@ section.pricing {
   padding-left: 1.25em;
   list-style-type: square;
 }
+.package-card img {
+  width: 100%;
+  height: auto;
+}
+
 .contact-top {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 50vw 75px 50vw;
-  border-color: #5b0e10 #5b0e10 #2bae66 #5b0e10;
+  border-color: #1a1a1a #1a1a1a #2bae66 #1a1a1a;
 }
 
 section.contact {

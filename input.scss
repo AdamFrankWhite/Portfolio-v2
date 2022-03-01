@@ -367,12 +367,12 @@ nav {
     @media (min-width: 800px) {
         border-width: 0 70vw 12vw 30vw;
     }
-    border-color: transparent transparent $maroon transparent;
+    border-color: transparent transparent $charcoal transparent;
     margin-top: -50px;
 }
 
 section.pricing {
-    background: $maroon;
+    background: $charcoal;
     padding: 3em 0;
     color: white;
 }
@@ -383,6 +383,17 @@ section.pricing {
     padding: 1.5em;
     width: 80%;
     margin: 2.5em auto;
+    overflow: hidden;
+    .package-card-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img {
+            width: 15%;
+            height: auto;
+            margin-right: 0.75em;
+        }
+    }
     h4 {
         text-transform: uppercase;
         font-weight: 300;
@@ -401,6 +412,10 @@ section.pricing {
         li {
         }
     }
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 // Contact
 
@@ -409,7 +424,7 @@ section.pricing {
     height: 0;
     border-style: solid;
     border-width: 0 50vw 75px 50vw;
-    border-color: $maroon $maroon $palegreen $maroon;
+    border-color: $charcoal $charcoal $palegreen $charcoal;
 }
 
 section.contact {
