@@ -32,10 +32,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
             rel="stylesheet"
         />
-        <script
-            src="https://kit.fontawesome.com/306d1177b1.js"
-            crossorigin="anonymous"
-        ></script>
+
         <script
             src="https://www.google.com/recaptcha/api.js"
             async
@@ -177,7 +174,34 @@
             <h4>My latest projects</h4>
             <div class="portfolio-cont">
                 <div class="portfolio-item">
-                    <img loading="lazy" src="/assets/shawfarm-desktop.png" />
+                    <picture
+                        ><source
+                            media="(max-width: 25em)"
+                            srcset="
+                                /assets/screenshots/shawfarm-desktop_phone_320.png 1x,
+                                /assets/screenshots/shawfarm-desktop_phone_420.png 2x,
+                                /assets/screenshots/shawfarm-desktop_phone_640.png 3x
+                            " />
+                        <source
+                            media="(max-width: 48em)"
+                            srcset="
+                                /assets/screenshots/shawfarm-desktop_tablet_768.png  1x,
+                                /assets/screenshots/shawfarm-desktop_tablet_1280.png 2x,
+                                /assets/screenshots/shawfarm-desktop_tablet_2048.png 3x
+                            " />
+                        <source
+                            media="(max-width: 75em)"
+                            srcset="
+                                /assets/screenshots/shawfarm-desktop_desktop_1200.png 1x,
+                                /assets/screenshots/shawfarm-desktop_desktop_1600.png 2x,
+                                /assets/screenshots/shawfarm-desktop_desktop_1920.png 3x
+                            " />
+                        <img
+                            src="/assets/screenshots/shawfarm-desktop.png"
+                            alt="shaw farm screenshot"
+                            title="shaw farm screenshot"
+                            loading="lazy"
+                    /></picture>
                     <div class="portfolio-item-content">
                         <h4>Shaw Farm Holidays</h4>
                         <h5>Logo design and website re-design</h5>
@@ -199,7 +223,34 @@
                 </div>
                 <hr />
                 <div class="portfolio-item">
-                    <img loading="lazy" src="/assets/heatons-desktop.png" />
+                    <picture
+                        ><source
+                            media="(max-width: 25em)"
+                            srcset="
+                                /assets/screenshots/heatons-desktop_phone_320.png 1x,
+                                /assets/screenshots/heatons-desktop_phone_420.png 2x,
+                                /assets/screenshots/heatons-desktop_phone_640.png 3x
+                            " />
+                        <source
+                            media="(max-width: 48em)"
+                            srcset="
+                                /assets/screenshots/heatons-desktop_tablet_768.png  1x,
+                                /assets/screenshots/heatons-desktop_tablet_1280.png 2x,
+                                /assets/screenshots/heatons-desktop_tablet_2048.png 3x
+                            " />
+                        <source
+                            media="(max-width: 75em)"
+                            srcset="
+                                /assets/screenshots/heatons-desktop_desktop_1200.png 1x,
+                                /assets/screenshots/heatons-desktop_desktop_1600.png 2x,
+                                /assets/screenshots/heatons-desktop_desktop_1920.png 3x
+                            " />
+                        <img
+                            src="/assets/screenshots/heatons-desktop.png"
+                            alt="heatons cats screenshot"
+                            title="heatons cats screenshot"
+                            loading="lazy"
+                    /></picture>
                     <div class="portfolio-item-content">
                         <h4>Heatons Cats</h4>
                         <h5>Website re-design</h5>
@@ -221,7 +272,34 @@
                 </div>
                 <hr />
                 <div class="portfolio-item">
-                    <img loading="lazy" src="/assets/qw-desktop.png" />
+                    <picture
+                        ><source
+                            media="(max-width: 25em)"
+                            srcset="
+                                /assets/screenshots/qw-desktop_phone_320.png 1x,
+                                /assets/screenshots/qw-desktop_phone_420.png 2x,
+                                /assets/screenshots/qw-desktop_phone_640.png 3x
+                            " />
+                        <source
+                            media="(max-width: 48em)"
+                            srcset="
+                                /assets/screenshots/qw-desktop_tablet_768.png  1x,
+                                /assets/screenshots/qw-desktop_tablet_1280.png 2x,
+                                /assets/screenshots/qw-desktop_tablet_2048.png 3x
+                            " />
+                        <source
+                            media="(max-width: 75em)"
+                            srcset="
+                                /assets/screenshots/qw-desktop_desktop_1200.png 1x,
+                                /assets/screenshots/qw-desktop_desktop_1600.png 2x,
+                                /assets/screenshots/qw-desktop_desktop_1920.png 3x
+                            " />
+                        <img
+                            src="/assets/screenshots/qw-desktop.png"
+                            alt="quitting weed screenshot"
+                            title="quitting weed screenshot"
+                            loading="lazy"
+                    /></picture>
                     <div class="portfolio-item-content">
                         <h4>ebook landing page</h4>
                         <h5>Website design with blog</h5>
@@ -340,5 +418,9 @@
             </div>
         </footer>
         <script src="/script.js" async defer></script>
+        <script
+            src="https://kit.fontawesome.com/306d1177b1.js"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>

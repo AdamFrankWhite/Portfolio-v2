@@ -213,6 +213,7 @@ nav ul li {
   background: #29af66;
   color: white;
   padding: 3em 0 7em 0;
+  overflow: hidden;
 }
 .services h3,
 .services h4,
@@ -232,6 +233,13 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
 }
+@media (min-width: 800px) {
+  .card-cont {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5em;
+  }
+}
 .card-cont .card {
   margin: 10vw 10vw 0 10vw;
   padding: 2em;
@@ -239,6 +247,12 @@ nav ul li {
   background: white;
   color: #181818;
   text-align: center;
+}
+@media (min-width: 500px) {
+  .card-cont .card {
+    margin: 2%;
+    width: 40%;
+  }
 }
 .card-cont .card ul {
   list-style-type: none;
@@ -276,7 +290,7 @@ nav ul li {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 100vw 100vw 75vw;
+    border-width: 20vw 385vw 100vw 75vw;
     border-color: transparent transparent #00203f transparent;
     margin-top: -100vw;
   }
@@ -287,7 +301,7 @@ nav ul li {
   height: 0;
   border-style: solid;
   border-width: 0 0 12vw 100vw;
-  border-color: transparent transparent white transparent;
+  border-color: #00203f #00203f white #00203f;
   margin-top: -12vw;
 }
 @media (min-width: 800px) {
