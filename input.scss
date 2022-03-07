@@ -43,8 +43,29 @@ ul {
 .hero-section {
     background: $turquoise;
     padding-bottom: 100px;
+    .hero-cont {
+        @media (min-width: 900px) {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 5%;
+        }
+    }
+    .hero-content {
+        @media (min-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
     img[alt="web design icon"] {
         width: 55vw;
+        @media (min-width: 600px) {
+            width: 40vw;
+        }
+        @media (min-width: 900px) {
+            width: 25vw;
+        }
         height: auto;
         display: block;
         margin: 100px auto 0 auto;
@@ -54,12 +75,19 @@ ul {
         text-align: center;
         line-height: 1em;
         color: $navy;
+        @media (min-width: 900px) {
+            text-align: left;
+        }
     }
     h1 {
         font-size: 1.9em;
         text-transform: uppercase;
         margin-top: 0.75em;
         font-weight: 600;
+        @media (min-width: 900px) {
+            margin-bottom: 0;
+            font-size: 2em;
+        }
     }
     h2 {
         width: 70%;
@@ -67,15 +95,25 @@ ul {
         font-size: 1.1em;
         font-weight: 500;
         margin-top: 0.25em;
+        @media (min-width: 900px) {
+            margin: 0 0 1em 0;
+        }
     }
     .cta-cont {
         display: flex;
         justify-content: center;
         margin: 1.5em;
+        @media (min-width: 900px) {
+            margin: 0;
+        }
         a {
             padding: 0.6em;
             margin: 1em 0.5em;
             font-size: 0.95em;
+            @media (min-width: 900px) {
+                margin: 0 1em 0 0;
+                font-size: 0.85em;
+            }
         }
         a:nth-of-type(1) {
             background: $navy;
@@ -95,6 +133,9 @@ header {
         font-size: 2em;
     }
     padding: 1em;
+    @media (min-width: 900px) {
+        padding: 1em 5%;
+    }
 }
 .logo-cont {
     display: flex;
@@ -155,9 +196,19 @@ header {
     // margin-top: -99px;
 }
 
-.hello-section {
+.hello {
     background: $navy;
     color: $paleturquoise;
+
+    @media (min-width: 700px) {
+        display: flex;
+        padding: 5%;
+    }
+    @media (min-width: 900px) {
+        display: flex;
+        padding: 10%;
+    }
+
     h3,
     h4,
     p {
@@ -167,6 +218,9 @@ header {
     h3 {
         font-size: 2em;
         text-align: center;
+        @media (min-width: 700px) {
+            text-align: left;
+        }
     }
     h4 {
         font-weight: 300;
@@ -185,6 +239,12 @@ img[src="/assets/me.png"] {
     height: auto;
     border: 5px white solid;
     border-radius: 20vw;
+    background: white;
+    @media (min-width: 700px) {
+        width: 25%;
+        border-radius: 0;
+        border: 12px white solid;
+    }
     display: block;
     margin: auto;
 }
@@ -341,6 +401,10 @@ nav {
         display: flex;
         flex-direction: column;
         width: 100%;
+        @media (min-width: 500px) {
+            width: 80%;
+            margin: auto;
+        }
         img {
             width: 100%;
             height: auto;
@@ -348,21 +412,56 @@ nav {
         h4 {
             color: $maroon;
             text-transform: uppercase;
-            font-size: 1.25em;
+            font-size: 1.5em;
             margin: 0.5em auto 0 auto;
+            font-weight: 600;
+            @media (min-width: 900px) {
+                text-align: left;
+                margin-bottom: 0;
+            }
         }
         h5 {
             font-style: italic;
             margin: 0.25em auto;
             text-align: center;
+
+            @media (min-width: 900px) {
+                text-align: left;
+                // font-size: 0.9em;
+                margin-top: -0.25em;
+            }
         }
         p {
             font-size: 0.9em;
+            @media (min-width: 900px) {
+                font-size: 0.7em;
+                line-height: 1.35em;
+            }
         }
         .portfolio-item {
             display: flex;
             flex-direction: column;
             padding: 1.5em;
+            @media (min-width: 900px) {
+                padding: 0;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+            }
+        }
+
+        picture {
+            @media (min-width: 900px) {
+                width: 55%;
+                padding-right: 2%;
+            }
+        }
+        .portfolio-item-content {
+            @media (min-width: 900px) {
+                width: 45%;
+                padding-left: 2%;
+                text-align: left;
+            }
         }
     }
 }
