@@ -293,8 +293,10 @@ nav ul li {
 
 .services {
   background: #29af66;
+  background-image: url("/assets/services-background.svg");
+  background-size: cover;
   color: white;
-  padding: 3em 0 7em 0;
+  padding: 3em 0;
   overflow: hidden;
 }
 .services h3,
@@ -315,7 +317,7 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .card-cont {
     flex-direction: row;
     flex-wrap: wrap;
@@ -330,7 +332,7 @@ nav ul li {
   color: #181818;
   text-align: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 700px) {
   .card-cont .card {
     margin: 2%;
     width: 40%;
@@ -384,7 +386,6 @@ nav ul li {
   border-style: solid;
   border-width: 0 0 12vw 100vw;
   border-color: #00203f #00203f white #00203f;
-  margin-top: -12vw;
 }
 @media (min-width: 800px) {
   .portfolio-top {
@@ -393,7 +394,7 @@ nav ul li {
 }
 
 .portfolio {
-  padding: 4em 0;
+  padding: 3em 0;
   color: #1a1a1a;
 }
 .portfolio hr {
@@ -458,9 +459,9 @@ nav ul li {
   flex-direction: column;
   padding: 1.5em;
 }
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .portfolio .portfolio-cont .portfolio-item {
-    padding: 0;
+    padding: 1.5em 0;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
@@ -517,6 +518,12 @@ section.pricing {
   width: 15%;
   height: auto;
   margin-right: 0.75em;
+}
+@media (min-width: 500px) {
+  .package-card .package-card-title img {
+    width: 3em;
+    margin: 0;
+  }
 }
 .package-card h4 {
   text-transform: uppercase;

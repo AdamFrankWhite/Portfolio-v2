@@ -286,8 +286,11 @@ nav {
 
 .services {
     background: $turquoisegreen;
+    background-image: url("/assets/services-background.svg");
+    background-size: cover;
+    // background-position: 0;
     color: white;
-    padding: 3em 0 7em 0;
+    padding: 3em 0;
     overflow: hidden;
     h3,
     h4,
@@ -306,14 +309,14 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media (min-width: 800px) {
+    @media (min-width: 700px) {
         flex-direction: row;
         flex-wrap: wrap;
         margin-top: 5em;
     }
     .card {
         margin: 10vw 10vw 0 10vw;
-        @media (min-width: 500px) {
+        @media (min-width: 700px) {
             margin: 2%;
             width: 40%;
         }
@@ -382,11 +385,11 @@ nav {
 
     // transform: rotate(180deg);
     border-color: $navy $navy white $navy;
-    margin-top: -12vw;
+    // margin-top: -117px;
 }
 
 .portfolio {
-    padding: 4em 0;
+    padding: 3em 0;
     color: $charcoal;
     hr {
         border-top: $charcoal 2px solid;
@@ -442,8 +445,8 @@ nav {
             display: flex;
             flex-direction: column;
             padding: 1.5em;
-            @media (min-width: 900px) {
-                padding: 0;
+            @media (min-width: 800px) {
+                padding: 1.5em 0;
                 flex-direction: row;
                 align-items: flex-start;
                 justify-content: center;
@@ -501,6 +504,10 @@ section.pricing {
             width: 15%;
             height: auto;
             margin-right: 0.75em;
+            @media (min-width: 500px) {
+                width: 3em;
+                margin: 0;
+            }
         }
     }
     h4 {
