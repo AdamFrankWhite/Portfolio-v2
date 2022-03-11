@@ -386,6 +386,7 @@ nav ul li {
   border-style: solid;
   border-width: 0 0 12vw 100vw;
   border-color: #00203f #00203f white #00203f;
+  margin-top: -10px;
 }
 @media (min-width: 800px) {
   .portfolio-top {
