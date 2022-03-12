@@ -336,9 +336,9 @@
             <hr />
             <div class="packages-cont">
                 <div class="package-card">
-                    <div class="package-card-title">
+                    <div class="package-card-title-cont">
                         <img src="/assets/icons8-starter-64.png" />
-                        <div>
+                        <div class="package-card-title">
                             <h4>Starter Package</h4>
                             <h5><span>from</span> £799</h5>
                         </div>
@@ -353,9 +353,9 @@
                     </ul>
                 </div>
                 <div class="package-card">
-                    <div class="package-card-title">
+                    <div class="package-card-title-cont">
                         <img src="/assets/icons8-premium-64.png" />
-                        <div>
+                        <div class="package-card-title">
                             <h4>Premium Package</h4>
                             <h5><span>from</span> £1299</h5>
                         </div>
@@ -374,20 +374,23 @@
         <section class="contact">
             <h3>Contact</h3>
             <hr />
-            <form action="" method="post">
+            <form
+                action="https://portfolio-test.adamwhite.tech/mailer.php"
+                method="post"
+            >
                 <label for="name">Name</label>
-                <input type="text" name="name" />
+                <input type="text" name="visitor_name" />
 
                 <label for="email">Email</label>
-                <input type="email" email="name" />
+                <input type="email" name="visitor_email" />
 
                 <label for="subject">Subject</label>
-                <input type="text" subject="name" />
+                <input type="text" name="email_title" />
                 <label for="message">Message</label>
-                <textarea name="message"></textarea>
+                <textarea name="visitor_message"></textarea>
                 <div
                     class="g-recaptcha"
-                    data-sitekey="6LfgqqceAAAAAJEmdLybVq4ySbNsWdIng-R6l7MO"
+                    data-sitekey="6LfrUtIeAAAAAH7jsartkFP7cs11YebQVQ3pEBYD"
                 ></div>
                 <input type="submit" />
             </form>
