@@ -31,6 +31,10 @@ ul {
   background: #adefd1;
   padding-bottom: 100px;
 }
+.hero-section .hero-cont {
+  max-width: 2000px;
+  margin: auto;
+}
 @media (min-width: 800px) {
   .hero-section .hero-cont {
     display: flex;
@@ -38,11 +42,22 @@ ul {
     padding: 10%;
   }
 }
+@media (min-width: 1200px) {
+  .hero-section .hero-cont {
+    display: flex;
+    padding: 5% 20%;
+  }
+}
 @media (min-width: 800px) {
   .hero-section .hero-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section .hero-content {
+    font-size: 1.35em;
   }
 }
 .hero-section img[alt="web design icon"] {
@@ -60,6 +75,13 @@ ul {
   .hero-section img[alt="web design icon"] {
     width: 25vw;
     margin-right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section img[alt="web design icon"] {
+    width: 18vw;
+    margin-right: 0;
+    margin: 200px auto 0 auto;
   }
 }
 .hero-section h1,
@@ -132,6 +154,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 2000px;
+  margin: auto;
   padding: 1em 5%;
 }
 header i {
@@ -142,9 +166,19 @@ header i {
     padding: 1.5em 10%;
   }
 }
+@media (min-width: 1200px) {
+  header {
+    padding: 1.5em 20%;
+  }
+}
 
 .logo-cont {
   display: flex;
+}
+@media (min-width: 1200px) {
+  .logo-cont {
+    font-size: 1.35em;
+  }
 }
 .logo-cont > span {
   font-size: 1.25em;
@@ -206,23 +240,45 @@ header i {
   background: #00203f;
   color: #dcf5e9;
 }
+.hello .hello-cont {
+  max-width: 2000px;
+  margin: auto;
+}
 @media (min-width: 700px) {
-  .hello {
+  .hello .hello-cont {
     display: flex;
     padding: 5%;
   }
 }
-@media (min-width: 900px) {
-  .hello {
+@media (min-width: 800px) {
+  .hello .hello-cont {
     display: flex;
-    padding: 10%;
+    padding: 1em 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .hello .hello-cont {
+    display: flex;
+    padding: 3em 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .hello .hello-cont .hello-intro-content {
+    font-size: 1.25em;
   }
 }
 .hello h3,
 .hello h4,
 .hello p {
-  width: 80%;
+  padding: 0 10%;
   margin: auto;
+}
+@media (min-width: 1200px) {
+  .hello h3,
+.hello h4,
+.hello p {
+    padding: 0 5%;
+  }
 }
 .hello h3 {
   font-size: 2em;
@@ -231,6 +287,7 @@ header i {
 @media (min-width: 700px) {
   .hello h3 {
     text-align: left;
+    font-size: 2.25em;
   }
 }
 .hello h4 {
@@ -238,10 +295,16 @@ header i {
   margin-bottom: 1em;
 }
 .hello p {
+  padding-right: 2%;
   color: white;
   font-size: 0.75em;
   margin-top: 1em;
   line-height: 1.5em;
+}
+@media (min-width: 800px) {
+  .hello p {
+    font-size: 0.775em;
+  }
 }
 
 img[src="/assets/me.png"] {
@@ -260,6 +323,13 @@ img[src="/assets/me.png"] {
     border: 12px white solid;
   }
 }
+@media (min-width: 1200px) {
+  img[src="/assets/me.png"] {
+    width: 19%;
+    border-radius: 0;
+    border: 12px white solid;
+  }
+}
 
 .services h3,
 .portfolio h3,
@@ -272,6 +342,22 @@ img[src="/assets/me.png"] {
   margin: auto;
   text-align: center;
   line-height: 1em;
+}
+@media (min-width: 800px) {
+  .services h3,
+.portfolio h3,
+.pricing h3,
+.contact h3 {
+    font-size: 1.75em;
+  }
+}
+@media (min-width: 1200px) {
+  .services h3,
+.portfolio h3,
+.pricing h3,
+.contact h3 {
+    font-size: 1.9em;
+  }
 }
 .services hr,
 .portfolio hr,
@@ -303,7 +389,16 @@ nav ul li {
 .services h3,
 .services h4,
 .services p {
-  padding: 0 10%;
+  padding: 0 12.5%;
+  max-width: 2000px;
+  margin: auto;
+}
+@media (min-width: 1200px) {
+  .services h3,
+.services h4,
+.services p {
+    padding: 0 20%;
+  }
 }
 .services p {
   color: white;
@@ -314,19 +409,31 @@ nav ul li {
 .services p:nth-of-type(1) {
   margin-top: 2em;
 }
+@media (min-width: 800px) {
+  .services p {
+    font-size: 0.85em;
+  }
+}
 
 .card-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 2em;
+  max-width: 2000px;
+  margin: auto;
 }
 @media (min-width: 800px) {
   .card-cont {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 5em;
+    margin-top: 3em;
     padding: 0 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .card-cont {
+    padding: 0 20%;
   }
 }
 .card-cont .card {
@@ -354,6 +461,16 @@ nav ul li {
   text-align: left;
   font-size: 0.8em;
   color: #181818;
+}
+@media (min-width: 800px) {
+  .card-cont .card ul li {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1200px) {
+  .card-cont .card ul li {
+    font-size: 1.15em;
+  }
 }
 .card-cont .card h4,
 .card-cont .card i {
@@ -415,6 +532,7 @@ nav ul li {
 .portfolio h4 {
   font-size: 0.8em;
   width: 100%;
+  margin-top: 0;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -423,10 +541,22 @@ nav ul li {
   flex-direction: column;
   width: 100%;
   padding: 2em 0;
+  max-width: 2000px;
+  margin: auto;
 }
 @media (min-width: 500px) {
   .portfolio .portfolio-cont {
     padding: 2em 10%;
+  }
+}
+@media (min-width: 900px) {
+  .portfolio .portfolio-cont {
+    padding: 2em 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio .portfolio-cont {
+    padding: 2em 15%;
   }
 }
 .portfolio .portfolio-cont img {
@@ -444,6 +574,7 @@ nav ul li {
   .portfolio .portfolio-cont h4 {
     text-align: left;
     margin-bottom: 0;
+    font-size: 1.7em;
   }
 }
 .portfolio .portfolio-cont h5 {
@@ -454,15 +585,22 @@ nav ul li {
 @media (min-width: 900px) {
   .portfolio .portfolio-cont h5 {
     text-align: left;
+    font-size: 1em;
     margin-top: -0.25em;
   }
 }
 .portfolio .portfolio-cont p {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .portfolio .portfolio-cont p {
-    font-size: 0.7em;
+    font-size: 0.8em;
+    line-height: 1.35em;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio .portfolio-cont p {
+    font-size: 0.9em;
     line-height: 1.35em;
   }
 }
@@ -471,7 +609,7 @@ nav ul li {
   flex-direction: column;
   padding: 1.5em;
 }
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .portfolio .portfolio-cont .portfolio-item {
     padding: 1.5em 0;
     flex-direction: row;
@@ -483,13 +621,17 @@ nav ul li {
   .portfolio .portfolio-cont picture {
     width: 55%;
     padding-right: 2%;
+    display: flex;
+    align-self: center;
   }
+}
+.portfolio .portfolio-cont .portfolio-item-content {
+  text-align: left;
 }
 @media (min-width: 900px) {
   .portfolio .portfolio-cont .portfolio-item-content {
     width: 45%;
     padding-left: 2%;
-    text-align: left;
   }
 }
 
@@ -513,11 +655,25 @@ section.pricing {
   color: white;
 }
 
+.packages-cont {
+  max-width: 2000px;
+  margin: auto;
+}
+@media (min-width: 800px) {
+  .packages-cont {
+    padding: 0 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .packages-cont {
+    padding: 0 20%;
+  }
+}
+
 .package-card {
   border: 1px #ffe600 solid;
   border-radius: 10px;
   padding: 1.5em;
-  width: 80%;
   margin: 2.5em auto;
   overflow: hidden;
 }
@@ -576,12 +732,19 @@ section.contact {
 }
 
 form {
+  max-width: 2000px;
+  margin: auto;
   padding: 3em 10%;
   margin: auto;
 }
 @media (min-width: 700px) {
   form {
     padding: 3em 20%;
+  }
+}
+@media (min-width: 1200px) {
+  form {
+    padding: 0 30%;
   }
 }
 form label {
@@ -602,6 +765,13 @@ form textarea {
   padding: 0.5em;
   font-size: 1.1em;
   border: 2px solid white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+form input:focus,
+form textarea:focus {
+  border: 2px solid yellow;
 }
 form textarea {
   min-height: 200px;
@@ -635,6 +805,7 @@ footer h4 {
   margin: 0;
 }
 footer .footer-content {
+  max-width: 1500px;
   margin: auto;
   display: flex;
   justify-content: space-between;
