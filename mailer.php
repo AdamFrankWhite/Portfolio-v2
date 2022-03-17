@@ -16,7 +16,8 @@ try {
      //Server settings
      $mail->SMTPDebug = 0;                      //Enable verbose debug output
      $mail->isSMTP();                                            //Send using SMTP
-     $mail->Host       = 'gator3015.hostgator.com';                     //Set the SMTP server to send through
+    //  $mail->Host       = 'gator3015.hostgator.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'NS6029.HOSTGATOR.COM';
      $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
      $mail->Username   = 'info@adamwhite.tech';                     //SMTP username
      $mail->Password   = 'Feeder2468';                               //SMTP password
