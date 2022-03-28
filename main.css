@@ -1,3 +1,8 @@
+.anchor {
+  padding-top: 100px !important;
+  margin-top: -100px !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -16,7 +21,7 @@ html {
 body,
 html {
   font-family: "Noto Sans", sans-serif;
-  font-size: 1.02em;
+  font-size: 1.05em;
   scroll-behavior: smooth;
   background: #adefd1;
   overflow-x: hidden;
@@ -36,7 +41,8 @@ ul {
   z-index: 1000;
   margin-top: 0;
   box-shadow: 1px 1px 10px 1px #3232328f;
-  padding: 0 20%;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .slide-down {
@@ -69,7 +75,7 @@ ul {
   }
 }
 .hero-section {
-  background: #dcf5e9;
+  background: #343333;
   padding-bottom: 100px;
 }
 .hero-section .hero-cont {
@@ -86,7 +92,7 @@ ul {
 @media (min-width: 1200px) {
   .hero-section .hero-cont {
     display: flex;
-    padding: 5% 20%;
+    padding: 7% 18% 5% 18%;
   }
 }
 @media (min-width: 800px) {
@@ -103,13 +109,14 @@ ul {
 }
 .hero-section img[alt="web design icon"] {
   width: 55vw;
+  margin: 50px auto 0 auto;
   height: auto;
   display: block;
-  margin: 100px auto 0 auto;
 }
 @media (min-width: 600px) {
   .hero-section img[alt="web design icon"] {
     width: 40vw;
+    margin: 100px auto 0 auto;
   }
 }
 @media (min-width: 800px) {
@@ -129,7 +136,7 @@ ul {
 .hero-section h2 {
   text-align: center;
   line-height: 1em;
-  color: #00203f;
+  color: white;
 }
 @media (min-width: 800px) {
   .hero-section h1,
@@ -142,6 +149,7 @@ ul {
   text-transform: uppercase;
   margin-top: 0.75em;
   font-weight: 600;
+  letter-spacing: 0.03em;
 }
 @media (min-width: 900px) {
   .hero-section h1 {
@@ -151,7 +159,6 @@ ul {
 }
 .hero-section h2 {
   width: 70%;
-  margin: auto;
   font-size: 1.1em;
   font-weight: 500;
   margin-top: 0.25em;
@@ -164,7 +171,7 @@ ul {
 .hero-section .cta-cont {
   display: flex;
   justify-content: center;
-  margin: 1.5em;
+  margin: 1.5em 0;
 }
 @media (min-width: 900px) {
   .hero-section .cta-cont {
@@ -204,7 +211,7 @@ ul {
 }
 
 header {
-  background: #004183;
+  background: #007691;
   color: white;
   width: 100%;
   display: flex;
@@ -212,19 +219,19 @@ header {
   align-items: center;
   max-width: 2000px;
   margin: auto;
-  padding: 1em 5%;
+  padding: 0 5%;
 }
 header i {
   font-size: 2em;
 }
 @media (min-width: 800px) {
   header {
-    padding: 1em 10%;
+    padding: 0 10%;
   }
 }
 @media (min-width: 1200px) {
   header {
-    padding: 0.5em 20%;
+    padding: 0 18%;
   }
 }
 
@@ -268,7 +275,7 @@ header i {
     overflow-x: hidden;
     padding-top: 30px;
     transition: 0.5s;
-    top: 90px;
+    top: 59px;
   }
 }
 #side-menu nav > ul {
@@ -288,28 +295,32 @@ header i {
   position: relative;
 }
 #side-menu nav > ul li a {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   padding: 0.5em;
   display: block;
   text-decoration: none;
 }
-#side-menu nav > ul li a::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-#side-menu nav > ul li a:hover::before {
-  transform: scaleX(1);
+@media (min-width: 1050px) {
+  #side-menu nav > ul li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  #side-menu nav > ul li a:hover::before {
+    transform: scaleX(1);
+  }
 }
 @media (min-width: 1050px) {
   #side-menu nav > ul li {
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 0.75em;
   }
 }
@@ -360,7 +371,7 @@ header i {
 @media (min-width: 1200px) {
   .hello .hello-cont {
     display: flex;
-    padding: 3em 20%;
+    padding: 3em 18%;
   }
 }
 @media (min-width: 1200px) {
@@ -396,7 +407,6 @@ header i {
   margin-bottom: 1em;
 }
 .hello p {
-  padding-right: 2%;
   color: white;
   font-size: 0.75em;
   margin-top: 1em;
@@ -405,6 +415,7 @@ header i {
 @media (min-width: 800px) {
   .hello p {
     font-size: 0.775em;
+    padding-right: 2%;
   }
 }
 
@@ -474,7 +485,7 @@ img[src="/assets/me.png"] {
   background-image: url("/assets/services-background.svg");
   background-size: cover;
   color: white;
-  padding: 3em 0;
+  padding: 5em 0;
   overflow: hidden;
 }
 .services h3,
@@ -488,21 +499,27 @@ img[src="/assets/me.png"] {
   .services h3,
 .services h4,
 .services p {
-    padding: 0 20%;
+    padding: 0 18%;
   }
 }
 .services p {
   color: white;
-  font-size: 0.75em;
+  font-size: 0.85em;
   margin-top: 1em;
   line-height: 1.5em;
 }
 .services p:nth-of-type(1) {
   margin-top: 2em;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .services p {
-    font-size: 0.85em;
+    font-size: 1.05em;
+    padding: 0 15%;
+  }
+}
+@media (min-width: 1200px) {
+  .services p {
+    padding: 0 30%;
   }
 }
 
@@ -514,7 +531,7 @@ img[src="/assets/me.png"] {
   max-width: 2000px;
   margin: auto;
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .card-cont {
     flex-direction: row;
     flex-wrap: wrap;
@@ -524,25 +541,25 @@ img[src="/assets/me.png"] {
 }
 @media (min-width: 1200px) {
   .card-cont {
-    padding: 0 20%;
+    padding: 0 18%;
   }
 }
 .card-cont .card {
   margin: 10vw 10vw 0 10vw;
   font-family: "Poppins", serif;
-  padding: 3em;
+  padding: 2em;
   border-radius: 20px;
   background: white;
   color: #181818;
   text-align: center;
 }
-@media (min-width: 600px) and (max-width: 799px) {
+@media (min-width: 600px) and (max-width: 999px) {
   .card-cont .card {
-    margin: 2% auto;
+    margin: 3% auto;
     width: 60%;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .card-cont .card {
     margin: 2%;
     width: 45%;
@@ -553,7 +570,6 @@ img[src="/assets/me.png"] {
   text-align: left;
   font-size: 0.8em;
   color: #181818;
-  padding: 0 2em;
 }
 .card-cont .card ul li {
   display: flex;
@@ -570,6 +586,7 @@ img[src="/assets/me.png"] {
 @media (min-width: 1200px) {
   .card-cont .card ul li {
     font-size: 1.15em;
+    padding: 0 2em;
   }
 }
 .card-cont .card h4,
@@ -578,7 +595,7 @@ img[src="/assets/me.png"] {
 }
 .card-cont .card:nth-of-type(1) > i:nth-of-type(1), .card-cont .card:nth-of-type(2) > i:nth-of-type(1), .card-cont .card:nth-of-type(3) > i:nth-of-type(1) {
   font-size: 2em;
-  padding: 0.6em;
+  padding: 0.5em;
   border-radius: 50%;
 }
 .card-cont .card h4 {
@@ -696,6 +713,7 @@ img[src="/assets/me.png"] {
 }
 .portfolio .portfolio-cont p {
   font-size: 0.8em;
+  margin: 0.75em auto;
 }
 @media (min-width: 1000px) {
   .portfolio .portfolio-cont p {
@@ -762,25 +780,42 @@ section.pricing {
 
 .packages-cont {
   max-width: 2000px;
-  margin: auto;
+  margin: 3em 0;
+  display: grid;
+  grid-template-columns: 1fr;
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .packages-cont {
-    padding: 0 10%;
+    grid-template-columns: 1fr 1fr;
+    padding: 3em 10%;
+    grid-gap: 4%;
   }
 }
 @media (min-width: 1200px) {
   .packages-cont {
-    padding: 0 20%;
+    padding: 3em 18%;
   }
 }
 
 .package-card {
-  border: 1px #ffe600 solid;
+  border: 2px #ffe600 solid;
   border-radius: 10px;
   padding: 1.5em;
-  margin: 2.5em auto;
-  overflow: hidden;
+  margin: 1.5em 10vw;
+}
+@media (min-width: 1000px) {
+  .package-card {
+    margin: 1.5em;
+  }
+}
+.package-card:nth-of-type(2) {
+  border: 2px solid #ffe600;
+}
+.package-card .package-headline {
+  font-size: 0.9em;
+  color: #e2e2e2;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
 }
 .package-card .package-card-title-cont {
   display: flex;
@@ -814,8 +849,11 @@ section.pricing {
   text-transform: uppercase;
 }
 .package-card ul {
-  padding-left: 1.25em;
-  list-style-type: square;
+  padding: 0.5em 0;
+  list-style-type: none;
+}
+.package-card ul li i {
+  padding: 0.25em 0.5em;
 }
 .package-card img {
   width: 100%;
@@ -827,11 +865,11 @@ section.pricing {
   height: 0;
   border-style: solid;
   border-width: 0 50vw 75px 50vw;
-  border-color: #1a1a1a #1a1a1a #2bae66 #1a1a1a;
+  border-color: #1a1a1a #1a1a1a #1d7e48 #1a1a1a;
 }
 
 section.contact {
-  background: #2bae66;
+  background: #1d7e48;
   padding: 2em 0;
   color: white;
 }
@@ -849,7 +887,7 @@ form {
 }
 @media (min-width: 1200px) {
   form {
-    padding: 0 30%;
+    padding: 3em 27%;
   }
 }
 form label {
@@ -882,7 +920,7 @@ form textarea {
 }
 form input[type=submit] {
   background: white;
-  color: #2bae66;
+  color: #1d7e48;
   margin-top: 0.5em;
 }
 
@@ -1037,7 +1075,7 @@ footer a:hover {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .hamburger-box {
@@ -1058,7 +1096,7 @@ footer a:hover {
 .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;

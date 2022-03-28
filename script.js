@@ -2,6 +2,9 @@ const burgerMenu = document.getElementById("burger-menu");
 const sideMenu = document.getElementById("side-menu");
 const header = document.getElementsByTagName("header")[0];
 const heroContainer = document.getElementsByClassName("hero-cont")[0];
+const mobileNavLinks = document
+    .getElementById("side-menu")
+    .getElementsByTagName("a");
 burgerMenu.addEventListener("click", () => {
     burgerMenu.classList.toggle("is-active");
     if (sideMenu.style.width == "100%") {
@@ -11,6 +14,19 @@ burgerMenu.addEventListener("click", () => {
         sideMenu.style.width = "100%";
         document.body.style.overflow = "hidden";
     }
+});
+
+// Close mobilenav on link click
+
+[...mobileNavLinks].forEach((link) => {
+    link.addEventListener("click", () => {
+        let mq = window.matchMedia("(max-width: 1049px)");
+        if (mq.matches) {
+            burgerMenu.classList.toggle("is-active");
+            sideMenu.style.width = 0;
+            document.body.style.overflow = "auto";
+        }
+    });
 });
 
 // Sticky header

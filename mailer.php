@@ -40,7 +40,7 @@ try {
      // PROCESS STATUS
      $error = "";
      //reCAPTCHA validation	
-     $secret = "6LfrUtIeAAAAAAXu9gHo1-J7rtFgXpdOwGtBPtna"; 
+     $secret = "6LchePAeAAAAAC78wkbHp7B-CFm0UR26aNNk5jFn"; 
      $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=".$_POST["g-recaptcha-response"];
      $verify = json_decode(file_get_contents($url));
      if (!$verify->success) { $error = "Invalid captcha"; }
