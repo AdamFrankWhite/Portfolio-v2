@@ -17,15 +17,15 @@ try {
      $mail->SMTPDebug = 0;                      //Enable verbose debug output
      $mail->isSMTP();                                            //Send using SMTP
     //  $mail->Host       = 'gator3015.hostgator.com';                     //Set the SMTP server to send through
-    $mail->Host       = 'NS6029.HOSTGATOR.COM';
+    $mail->Host       = 'uk38.siteground.eu';
      $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-     $mail->Username   = 'info@adamwhite.tech';                     //SMTP username
-     $mail->Password   = 'Feeder2468';                               //SMTP password
+     $mail->Username   = 'mailer@adamwhite.tech';                     //SMTP username
+     $mail->Password   = 'Feeder2883';                               //SMTP password
      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
      $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
  
      //Recipients
-     $mail->setFrom('info@adamwhite.tech', 'Adam White');
+     $mail->setFrom('mailer@adamwhite.tech', $visitor_name); // Mailer
      $mail->addAddress('info@adamwhite.tech', 'Adam White');     //Add a recipient
      $mail->addReplyTo($visitor_email, $visitor_name);
  
@@ -33,6 +33,7 @@ try {
      //Content
      $mail->isHTML(true);                                  //Set email format to HTML
      $mail->Subject = $email_title;
+     $mail->From = "mailer@adamwhite.tech";
      $mail->Body    = $visitor_message;
      $mail->AltBody = $visitor_message;
 
