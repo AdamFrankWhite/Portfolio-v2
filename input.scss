@@ -17,7 +17,7 @@ $maroon: #5b0e10;
 // Padding
 
 $tablet: 10%;
-$desktop: 18%;
+$desktop: 15%;
 
 $maxView: 2000px;
 
@@ -101,54 +101,90 @@ ul {
 }
 
 // Header
+.nav-logo {
+    transform: rotate(0);
+    transition: transform 0.8s;
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+
 .hero-section {
-    background: #343333;
+    // background: #343333;
+    background-image: url("./assets/nightsky.png");
+
+    background-image: url("./assets/stars-background.jpg");
+
     padding-bottom: 100px;
+    height: 800px;
+    min-height: 100vh;
+
     // background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     // url("/assets/html-gf31965510_1280.png");
     // background-size: cover;
     .hero-cont {
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         max-width: $maxView;
-        // min-height: 500px;
-        // height: 85vh;
         margin: auto;
-        @media (min-width: 800px) {
-            display: flex;
-            flex-direction: row-reverse;
-            padding: $tablet;
+        h2 {
+            padding-top: 1em;
+            margin: 0;
+            font-size: 1.75em;
+            color: white;
+            font-weight: 600;
         }
-        @media (min-width: 1200px) {
-            display: flex;
-            padding: 7% $desktop 5% $desktop;
-        }
-    }
-    .hero-content {
-        @media (min-width: 800px) {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        @media (min-width: 1200px) {
-            font-size: 1.35em;
-        }
-    }
 
-    img[alt="web design icon"] {
-        width: 55vw;
-        margin: 50px auto 0 auto;
-        @media (min-width: 600px) {
-            width: 40vw;
-            margin: 100px auto 0 auto;
+        h3 {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.685);
+            font-weight: 400;
         }
-        @media (min-width: 800px) {
-            width: 25vw;
-            margin-right: 0;
-        }
-        @media (min-width: 1200px) {
-            width: 18vw;
-            margin-right: 0;
-            margin: 200px 0 0 auto;
-        }
+        // @media (min-width: 800px) {
+        //     display: flex;
+        //     flex-direction: row-reverse;
+        //     padding: $tablet;
+        // }
+        // @media (min-width: 1200px) {
+        //     display: flex;
+        //     padding: 7% $desktop 5% $desktop;
+        // }
+    }
+    // .hero-content {
+    //     padding: 1em;
+    //     @media (min-width: 800px) {
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: flex-start;
+    //     }
+    //     @media (min-width: 1200px) {
+    //         font-size: 1.35em;
+    //     }
+    // }
+
+    .hero-icon {
+        min-width: 100px;
+        max-width: 400px;
+        width: 15vw;
+        margin: auto;
+        background: white;
+        border-radius: 50%;
+        // @media (min-width: 600px) {
+        //     width: 40vw;
+        //     margin: 100px auto 0 auto;
+        // }
+        // @media (min-width: 800px) {
+        //     width: 25vw;
+        //     margin-right: 0;
+        // }
+        // @media (min-width: 1200px) {
+        //     width: 18vw;
+        //     margin-right: 0;
+        //     margin: 200px 0 0 auto;
+        // }
         height: auto;
         display: block;
     }
@@ -173,7 +209,7 @@ ul {
         }
     }
     h2 {
-        width: 70%;
+        // width: 70%;
         // margin: auto;
         font-size: 1.1em;
         font-weight: 500;
@@ -223,14 +259,93 @@ ul {
         }
     }
 }
+
+// pulse animation
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+    box-shadow: none;
+    transition: box-shadow 0.2s;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(234, 234, 234, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(234, 234, 234, 0.2);
+    }
+}
+
+// arrow animation
+.arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 70px;
+}
+
+.arrows path {
+    stroke: #caebff;
+    fill: transparent;
+    stroke-width: 3px;
+    animation: arrow 4s infinite;
+    -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
 header {
-    background: #007691;
+    background: #007ad4;
     color: white;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: $maxView;
     margin: auto;
     i {
         font-size: 2em;
@@ -359,6 +474,7 @@ header {
 .hello {
     background: $navy;
     color: $paleturquoise;
+
     .hello-cont {
         max-width: $maxView;
         margin: auto;
@@ -414,29 +530,25 @@ header {
     }
 }
 
-img[src="/assets/me.png"] {
-    width: 30%;
-    height: auto;
-    border: 5px white solid;
-    border-radius: 20vw;
-    background: white;
-    @media (min-width: 700px) {
-        width: 25%;
-        border-radius: 0;
-        border: 12px white solid;
+img[src="/assets/hero-icon.svg"] {
+    width: 50%;
+    @media (min-width: 600px) {
+        width: 30%;
     }
+    padding: 1em 2em;
+    margin: 0 auto 1em auto;
+    height: auto;
+    border-radius: 15px;
+    background: white;
     @media (min-width: 1200px) {
-        width: 19%;
-        border-radius: 0;
-        border: 12px white solid;
+        width: 25%;
     }
     display: block;
-    margin: auto;
 }
 
 // H3 Heading
 
-.services,
+.skills,
 .portfolio,
 .pricing,
 .contact {
@@ -462,9 +574,9 @@ img[src="/assets/me.png"] {
     }
 }
 
-// Services
+// Skills
 
-.services {
+.skills {
     background: $turquoisegreen;
     background-image: url("/assets/services-background.svg");
     background-size: cover;
@@ -492,10 +604,10 @@ img[src="/assets/me.png"] {
         }
         @media (min-width: 600px) {
             font-size: 1.05em;
-            padding: 0 15%;
+            padding: 0 10%;
         }
         @media (min-width: 1200px) {
-            padding: 0 30%;
+            padding: 0 27%;
         }
     }
 }
@@ -521,22 +633,31 @@ img[src="/assets/me.png"] {
         // transform: rotate(45deg);
         @media (min-width: 600px) and (max-width: 999px) {
             margin: 3% auto;
-            width: 60%;
+            width: 50%;
             // height: 25vw;
         }
         @media (min-width: 1000px) {
             margin: 2%;
-            width: 45%;
+            width: 30%;
+            max-width: 400px;
             // height: 20vw;
         }
         // width: 100%;
-        padding: 2em;
+        padding: 1.5em;
         border-radius: 20px;
 
         background: white;
         color: rgb(24, 24, 24);
         text-align: center;
-
+        .icon {
+            width: auto;
+            height: 70px;
+            padding: 5% 5% 0 5%;
+            margin-bottom: 1em;
+        }
+        .icon-padding {
+            padding-top: 1.25em;
+        }
         ul {
             list-style-type: none;
             text-align: left;
@@ -545,16 +666,23 @@ img[src="/assets/me.png"] {
             // padding: 0 0.5em;
             li {
                 display: flex;
+                justify-content: flex-start;
+
+                img[src="./assets/icons/chevron-right.svg"] {
+                    width: 1em;
+                    height: auto;
+                    padding-right: 0.5em;
+                }
                 i {
                     font-size: 1.2em;
-                    padding: 0.25em 0.5em;
+                    padding: 0.15em 0;
                 }
                 @media (min-width: 800px) {
                     font-size: 1em;
                 }
                 @media (min-width: 1200px) {
                     font-size: 1.15em;
-                    padding: 0 2em;
+                    padding: 0;
                 }
             }
         }
@@ -575,7 +703,7 @@ img[src="/assets/me.png"] {
             text-transform: uppercase;
             width: 100%;
             line-height: 1.1em;
-            margin: 0.5em 0 1em 0;
+            margin: 0 0 0.5em 0;
         }
         &:nth-of-type(1) > i:nth-of-type(1) {
             color: #ea1010;
@@ -649,7 +777,7 @@ img[src="/assets/me.png"] {
             padding: 2em $tablet;
         }
         @media (min-width: 1200px) {
-            padding: 2em 20%;
+            padding: 2em 15%;
         }
         img {
             width: 100%;
@@ -659,7 +787,7 @@ img[src="/assets/me.png"] {
             color: $maroon;
             text-transform: uppercase;
             font-size: 1.5em;
-            margin: 0.5em auto 0 auto;
+            margin: 0;
             font-weight: 600;
             @media (min-width: 900px) {
                 text-align: left;
@@ -693,9 +821,15 @@ img[src="/assets/me.png"] {
         .portfolio-item {
             a {
                 width: 100%;
+                display: flex;
+                justify-content: center;
                 @media (min-width: 900px) {
                     width: 70%;
                 }
+            }
+            ul {
+                padding-left: 1em;
+                font-size: 0.9em;
             }
             display: flex;
             flex-direction: column;
@@ -715,6 +849,10 @@ img[src="/assets/me.png"] {
                 display: flex;
                 align-self: center;
             }
+        }
+        img[src="/assets/icons/appicon.svg"] {
+            width: 50%;
+            height: auto;
         }
         .portfolio-item-content {
             text-align: left;
