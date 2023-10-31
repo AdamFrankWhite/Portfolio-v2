@@ -3,7 +3,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Adam White | Stockport-based Web Developer</title>
+        <title>
+            Why More Businesses are Going Serverless | Stockport-based Web
+            Developer
+        </title>
         <meta
             name="description"
             content="Based in Stockport, Adam White is a developer with a passion for all things web."
@@ -99,37 +102,105 @@
             </header>
             <div id="sentinel"></div>
         </section>
-        <section class="page-wrapper">
+        <section class="page-wrapper blog-post">
             <div class="content-header">
                 <h1>Blog</h1>
-                <h2>The Importance of Server-side Validation</h2>
-                <h3>
-                    Server-side is the main defence against malicious actors
-                </h3>
+                <h2>Why More Businesses are Going Serverless</h2>
+
+                <div class="byline">
+                    <span class="date-published">31/10/23</span
+                    ><img
+                        class="author-thumb"
+                        src="../../assets/author-thumb.jpg"
+                        alt="Adam White"
+                    /><span class="author-text">Adam White</span>
+                </div>
+                <img
+                    class="post-image"
+                    src="/blog/images/cloud-providers.png"
+                />
                 <p>
-                    Neglect your server-side validation at your peril: without
-                    adequate protection your web application will be wide open
-                    to a host of malicious attacks: XSS attacks, and SQL/NoSQL
-                    injection. After briefly describing each of these threats,
-                    we will look at how client side validation and its
-                    (significant) limitations, before introducing common types
-                    of web attacks (XSS and injections), how you can defend
-                    yourself, as well as looking at a few examples
+                    Serverless computing refers to the latest evolution of cloud
+                    computing whereby backend services are managed by a cloud
+                    provider on an on-demand, scalable, pay-as-you-go basis.
+                    This is markedly different from traditional cloud computing
+                    services, typically involving the renting of servers and
+                    hardware on an ongoing basis, with the organisation paying
+                    regardless of whether the hardware is utilised. The major
+                    providers include Amazon Web Services, Microsoft Azure and
+                    Google Cloud Platform, although there are open-source
+                    alternatives like Apache OpenWhisk.
+                </p>
+                <h3>Serverless computing defined</h3>
+                <p>
+                    The term ‘serverless’ is often used synonymously with
+                    Function-as-a-Service (FaaS), which provide on-demand code
+                    execution – the most popular FaaS services include AWS
+                    Lambda, Microsoft Azure Functions and Google Cloud
+                    Functions. The serverless paradigm also encompasses managed
+                    back-end services (BaaS) including data storage (e.g. S3),
+                    databases (e.g. DynamoDB), notification systems,
+                    authentication (Cognito) and much more.
+                </p>
+                <h3>Benefits of serverless vs serverful</h3>
+                <p>
+                    A prime use case for serverless is providing web API
+                    services, handling requests and responses. The main strength
+                    of serverless is scalability and the ability to scale to
+                    zero, meaning you only pay for actual usage.
+                </p>
+                <p>
+                    When renting traditional cloud computing hardware, most of
+                    the cost is spent maintaining an idle server. Given typical
+                    server utilisation is below 25%
+                    (https://middleware.io/blog/efficient-server-utilization/),
+                    switching to serverless solutions massively reduces
+                    operating costs as businesses only pay for individual
+                    function executions, fine-grained to the hundreds of
+                    milliseconds.
+                </p>
+                <p>
+                    Maintaining servers, ensuring adequate redundancy,
+                    load-balancing and security measures is also costly and
+                    burdensome to developers. Serverless computing solves these
+                    issues by offloading those concerns to the cloud provider,
+                    who leverage their considerable infrastructure to provide
+                    robust security, performance and scalability, as well as
+                    handling server maintenance and ensuring service
+                    reliability.
+                </p>
+                <h3>Limitations</h3>
+                <p>
+                    This style of web application architecture does come with
+                    its drawbacks, with the main disadvantages being cold starts
+                    and vendor lock-in.
+                </p>
+                <p>
+                    Cold start refers to the small delay it takes for a function
+                    instance runtime environment to initialise, which for a
+                    time-sensitive application could be critical. Nonetheless,
+                    this issue can be mitigated through warm starts, where
+                    functions are periodically initialised in anticipation of
+                    incoming requests or through request pattern analysis.
+                </p>
+
+                <p>
+                    Vendor lock-in refers to the increased likelihood of
+                    becoming tied to a specific cloud provider as
+                    interoperability with other platforms can be more difficult
+                    or costly to configure.
+                </p>
+                <h3>Summary</h3>
+                <p>
+                    Gradually, businesses are moving to an increasingly
+                    serverless architecture, building cloud-native applications
+                    that take advantage of reduced operational costs, fast
+                    scalability, high performance and reduced developer burden.
+                    Ultimately, cloud providers are offering convenience and
+                    reliability, at the expense of a loss of developer control
+                    and vendor lock-in.
                 </p>
             </div>
-            <a href="posts/post1.html" class="post-preview">
-                <img class="post-preview-thumbnail" src="images/blog1.jpg" />
-                <div class="post-preview-content">
-                    <h3>Post title</h3>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Iure similique ratione sequi quasi! Distinctio
-                        nemo nihil commodi quam consequatur aspernatur tenetur
-                        cumque illo sit, quia dolorum laudantium quidem
-                        molestiae aliquid!
-                    </p>
-                </div>
-            </a>
         </section>
         <footer>
             <div class="footer-content">
