@@ -111,9 +111,9 @@ ul {
 
 .hero-section {
     // background: #343333;
-    background-image: url("./assets/nightsky.png");
+    // background-image: url("/assets/nightsky.png");
 
-    background-image: url("./assets/stars-background.jpg");
+    background-image: url("../assets/stars-background.jpg");
 
     padding-bottom: 100px;
     height: 800px;
@@ -670,7 +670,7 @@ img[src="/assets/hero-icon.svg"] {
         text-align: center;
         .icon {
             width: auto;
-            height: 70px;
+            height: 60px;
             padding: 5% 5% 0 5%;
             margin-bottom: 1em;
         }
@@ -1294,6 +1294,11 @@ footer {
     }
     .content-header {
         padding: 5em 0;
+
+        h1,
+        p {
+            padding-bottom: 1em;
+        }
     }
     h1 {
         font-size: 2.5em;
@@ -1303,12 +1308,102 @@ footer {
         font-size: 1.5em;
     }
 }
+.post-preview-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    @media (min-width: 600px) and (max-width: 1199px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.byline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.8em;
+    .date-published {
+        font-weight: bold;
+    }
 
+    .author-thumb {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        margin: 0.5em;
+        border: 2px solid rgb(42, 42, 255);
+    }
+    .author-text {
+        font-weight: bold;
+    }
+}
+
+.blog-post {
+    font-size: 1.25em;
+}
+.post-image {
+    padding-bottom: 1em;
+}
 .post-preview {
     width: 100%;
     display: flex;
-    padding-bottom: 2em;
-    img {
-        padding-right: 2%;
+    flex-direction: column;
+    .post-preview-thumbnail {
+        width: 100%;
+        height: auto;
+        padding: 3%;
+        object-fit: cover;
+    }
+
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        .post-preview-thumbnail {
+            width: 35%;
+            height: auto;
+            padding: 0;
+            padding-right: 2%;
+        }
+        .post-preview-content {
+            width: 65%;
+        }
+    }
+    padding: 2em 0;
+    border-top: 1px solid white;
+
+    .post-preview-content {
+        padding: 0.5em 1em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 1200px) {
+            align-items: flex-end;
+        }
+    }
+    h3 {
+        font-size: 1.75em;
+        font-family: "Noto Sans Mono", Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: 1.25em;
+        font-style: italic;
+        font-family: "Noto Sans Mono", Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 500;
+    }
+    h5 {
+        padding-bottom: 1.5em;
+    }
+    p {
+        font-size: 0.9em;
+        // text-align: justify;
+        padding-bottom: 1em;
+    }
+
+    .read-more-link {
+        font-family: "MONO FONT", Verdana, Geneva, Tahoma, sans-serif;
+        background: none;
+        color: cyan;
+        border: 2px solid cyan;
+        border-radius: 10px;
+        padding: 0.5em;
     }
 }
